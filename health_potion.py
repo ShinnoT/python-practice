@@ -9,7 +9,7 @@ difficulty = 1
 
 potion_health = int(random.randint(25, 50) / difficulty)
 
-# python you can call mehods by brackets in the begginning like int(), not like ruby at the end .to_i
+# python's int() == .to_i in ruby
 # float() ==  .to_f as well
 
 health += potion_health

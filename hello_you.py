@@ -1,3 +1,8 @@
+#personal notes
+#input() is the same as gets.chomp in ruby
+#must save input() in a variable
+
+
 #ask user for name
 name = input("What is your name?: ")
 #ask user for age

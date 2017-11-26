@@ -15,3 +15,19 @@ hobby = input("What do you enjoy doing in your free time?: ")
 #create output text
 output =
 #print output to screen
+
+
+
+
+
+#string concatination and interpolation in python
+#A = "blah"
+#B = "blob"
+# A + B
+# will return "blahblob"
+
+#"="*5
+#will return "====="
+
+#however, cant add different types (it wont convert implicitly)
+

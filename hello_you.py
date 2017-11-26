@@ -6,7 +6,8 @@
 #ask user for name
 name = input("What is your name?: ")
 #ask user for age
-age = input("What is your age?: ")
+age = int(input("What is your age?: "))
+# print(type(age)) --> <class 'int'>
 #ask user for city
 city = input("Which city do you live in?: ")
 #ask user what they enjoy

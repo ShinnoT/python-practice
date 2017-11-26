@@ -13,9 +13,9 @@ city = input("Which city do you live in?: ")
 #ask user what they enjoy
 hobby = input("What do you enjoy doing in your free time?: ")
 #create output text
-output =
+output = "hello {0}, I am from {2} as well! I love {3} as well omg. you will be {1} next year".format(name, age+1, city, hobby)
 #print output to screen
-
+print(output)
 
 
 

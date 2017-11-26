@@ -31,3 +31,13 @@ output =
 
 #however, cant add different types (it wont convert implicitly)
 
+#string interpolation
+# "{} - {}".format(A,B)
+# will return "blah - blob"
+
+# "{} - {}".format(B,A)
+# will return "blob - blah"
+# OR you can do it this way
+# "{1} - {0}".format(A,B)
+# will return "blob - blah"
+

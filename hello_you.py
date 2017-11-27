@@ -31,7 +31,7 @@ print(output)
 
 #however, cant add different types (it wont convert implicitly)
 
-#string interpolation
+#string formatting (same as string interpolation in ruby)
 # "{} - {}".format(A,B)
 # will return "blah - blob"
 

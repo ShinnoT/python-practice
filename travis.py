@@ -25,4 +25,7 @@ while True:
     add = input("would you live to be added (y/n)?: ").strip().lower()
 
     if add == "y":
-
+      known_users.append(name)
+      print("your name is now added to the list!")
+    else
+      print("cool no probs")

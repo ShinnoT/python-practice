@@ -6,7 +6,8 @@ for letter in user_input:
   if letter.lower() in "aeiou":
     vowels += 1
   elif letter == " ":
-    pass #pass statement does nothing particular but can act as a placeholder
+    pass
+    #pass statement does nothing particular but can act as a placeholder
   else:
     consonants += 1
 

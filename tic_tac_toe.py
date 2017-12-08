@@ -17,4 +17,11 @@ def print_board():
   print()
 
 
+while True:
+  print_board()
+  choice = int(input("enter your move player1: 1-9 --> ").strip())
+  board[choice - 1] = "X"
+  print_board()
+  choice2 = int(input("enter your move player2: 1-9 --> ").strip())
+  board[choice2 - 1] = "O"
 

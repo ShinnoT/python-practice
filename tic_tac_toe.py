@@ -47,8 +47,11 @@ def winner(icon):
   (board[2] == icon and board[4] == icon and board[6] == icon):
     if icon == "X":
       print("player1 is the winner!!")
+      print("player2 is the loser :(")
     else:
       print("player2 is the winner!!")
+      print("player1 is the loser :(")
+
 
 while True:
   print_board()

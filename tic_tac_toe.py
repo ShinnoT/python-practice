@@ -32,10 +32,30 @@ def player2(choice2):
   else:
     board[choice2 - 1] = "O"
 
+
+icon1 = "X"
+icon2 = "O"
+
+def winner(icon):
+  if (board[0] == icon and board[1] == icon and board[2] == icon) or \
+  (board[3] == icon and board[4] == icon and board[5] == icon) or \
+  (board[6] == icon and board[7] == icon and board[8] == icon) or \
+  (board[0] == icon and board[3] == icon and board[6] == icon) or \
+  (board[1] == icon and board[4] == icon and board[7] == icon) or \
+  (board[2] == icon and board[5] == icon and board[8] == icon) or \
+  (board[0] == icon and board[4] == icon and board[8] == icon) or \
+  (board[2] == icon and board[4] == icon and board[6] == icon):
+    if icon == "X":
+      print("player1 is the winner!!")
+    else:
+      print("player2 is the winner!!")
+
 while True:
   print_board()
   choice = int(input("enter your move player1: 1-9 --> ").strip())
   player1(choice)
   print_board()
+  winner(icon1)
   choice2 = int(input("enter your move player2: 1-9 --> ").strip())
   player2(choice2)
+  winner(icon2)

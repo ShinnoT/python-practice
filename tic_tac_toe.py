@@ -36,7 +36,7 @@ def player2(choice2):
 icon1 = "X"
 icon2 = "O"
 
-def winner(icon):
+def is_winner(icon):
   if (board[0] == icon and board[1] == icon and board[2] == icon) or \
   (board[3] == icon and board[4] == icon and board[5] == icon) or \
   (board[6] == icon and board[7] == icon and board[8] == icon) or \
@@ -45,22 +45,23 @@ def winner(icon):
   (board[2] == icon and board[5] == icon and board[8] == icon) or \
   (board[0] == icon and board[4] == icon and board[8] == icon) or \
   (board[2] == icon and board[4] == icon and board[6] == icon):
-    if icon == "X":
-      print("player1 is the winner!!")
-      print("player2 is the loser :(")
-      return "complete"
-    else:
-      print("player2 is the winner!!")
-      print("player1 is the loser :(")
-      return "complete"
+    return True
+  else:
+    return False
 
 
-while (winner(icon1) == None) or (winner(icon2) == None):
+while True:
   print_board()
   choice = int(input("enter your move player1: 1-9 --> ").strip())
   player1(choice)
   print_board()
-  winner(icon1)
+  if is_winner("X"):
+    print("player1 is the winner!")
+    break
+    #instead of breaking make it clear the board?
   choice2 = int(input("enter your move player2: 1-9 --> ").strip())
   player2(choice2)
-  winner(icon2)
+  if is_winner("O"):
+    print("player2 is the winner!")
+    break
+    #instead of breaking make it clear the board?

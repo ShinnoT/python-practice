@@ -49,6 +49,11 @@ def is_winner(icon):
   else:
     return False
 
+def is_draw():
+  if " " not in board:
+    return True
+  else:
+    return False
 
 while True:
   print_board()
@@ -59,9 +64,15 @@ while True:
     print("player1 is the winner!")
     break
     #instead of breaking make it clear the board?
+  elif is_draw():
+    print("its a draw!")
+    break
   choice2 = int(input("enter your move player2: 1-9 --> ").strip())
   player2(choice2)
   if is_winner("O"):
     print("player2 is the winner!")
     break
     #instead of breaking make it clear the board?
+  elif is_draw():
+    print("its a draw!")
+    break

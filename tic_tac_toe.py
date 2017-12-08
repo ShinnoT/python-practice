@@ -48,12 +48,14 @@ def winner(icon):
     if icon == "X":
       print("player1 is the winner!!")
       print("player2 is the loser :(")
+      return "complete"
     else:
       print("player2 is the winner!!")
       print("player1 is the loser :(")
+      return "complete"
 
 
-while True:
+while (winner(icon1) == None) or (winner(icon2) == None):
   print_board()
   choice = int(input("enter your move player1: 1-9 --> ").strip())
   player1(choice)

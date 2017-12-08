@@ -16,33 +16,15 @@ def print_board():
   print(row3)
   print()
 
-# def player1(choice):
-#   if board[choice - 1] != " ":
-#     print("that space is already taken")
-#     choice = int(input("enter your move player1: 1-9 --> ").strip())
-#     board[choice - 1] = "X"
-#   else:
-#     board[choice - 1] = "X"
-
-# def player2(choice2):
-#   if board[choice2 - 1] != " ":
-#     print("that space is already taken")
-#     choice2 = int(input("enter your move player2: 1-9 --> ").strip())
-#     board[choice2 - 1] = "O"
-#   else:
-#     board[choice2 - 1] = "O"
-
-while True:
-  print_board()
-  choice = int(input("enter your move player1: 1-9 --> ").strip())
+def player1(choice):
   if board[choice - 1] != " ":
     print("that space is already taken")
     choice = int(input("enter your move player1: 1-9 --> ").strip())
     board[choice - 1] = "X"
   else:
     board[choice - 1] = "X"
-  print_board()
-  choice2 = int(input("enter your move player2: 1-9 --> ").strip())
+
+def player2(choice2):
   if board[choice2 - 1] != " ":
     print("that space is already taken")
     choice2 = int(input("enter your move player2: 1-9 --> ").strip())
@@ -50,3 +32,10 @@ while True:
   else:
     board[choice2 - 1] = "O"
 
+while True:
+  print_board()
+  choice = int(input("enter your move player1: 1-9 --> ").strip())
+  player1(choice)
+  print_board()
+  choice2 = int(input("enter your move player2: 1-9 --> ").strip())
+  player2(choice2)

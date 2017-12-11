@@ -20,3 +20,9 @@ class Account:
 class Current(Account):
   def __init__(self, name, balance):
     super().__init__(name, balance, min_balance = -1000)
+
+
+# shinno = Current("Shinno", 500)
+# shinno.deposit(500)
+# shinno.statement()
+# #will print out "account balance: $1000"

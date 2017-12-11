@@ -27,6 +27,7 @@ coin3.color # will still return "gold"
 
 class Pound:
 
+  #init method creates new instance of class object
   def __init__(self, rare=False):
     self.rare = rare
 
@@ -38,6 +39,13 @@ class Pound:
     self.color = "gold"
     self.diameter = 22.5
     self.heads = True
+
+
+  #del method deletes new instance of class object (destructive method)
+  #useful in this case because we can imitate "spending" a Pound
+  def __del__(self):
+    print("coin spent")
+
 
   def rust(self):
     self.color = "greenish"
@@ -70,3 +78,5 @@ coin6.color #will return "gold"
 
 #flipping coin using instance method defined above
 coin6.flip_coin()
+
+

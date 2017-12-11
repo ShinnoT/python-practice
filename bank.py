@@ -21,8 +21,12 @@ class Current(Account):
   def __init__(self, name, balance):
     super().__init__(name, balance, min_balance = -1000)
 
+  def __str__(self):
+    return self.name
+
 
 # shinno = Current("Shinno", 500)
 # shinno.deposit(500)
 # shinno.statement()
 # #will print out "account balance: $1000"
+# print(shinno) #will now print "Shinno" because of __str__ method

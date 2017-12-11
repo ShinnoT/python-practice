@@ -1,3 +1,5 @@
+import random
+
 class Pound:
 
   value = 1.00
@@ -43,6 +45,11 @@ class Pound:
   def clean(self):
     self.color = "gold"
 
+  def flip_coin(self):
+    heads_options = [True, False]
+    choice = random.choice(heads_options) #need to import random at top to use random.choice method
+    self.heads = choice
+
 
 #making a Pund nstance
 coin4 = Pound(rare=True)
@@ -60,3 +67,6 @@ coin6.color #will return "greenish"
 #doing opposite, so cleaning an instance of Pound
 coin6.clean()
 coin6.color #will return "gold"
+
+#flipping coin using instance method defined above
+coin6.flip_coin()

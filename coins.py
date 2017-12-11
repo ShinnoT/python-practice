@@ -40,9 +40,23 @@ class Pound:
   def rust(self):
     self.color = "greenish"
 
+  def clean(self):
+    self.color = "gold"
+
 
 #making a Pund nstance
 coin4 = Pound(rare=True)
 coin5 = Pound()
 coin4.value #will return 5.00
 coin5.value #will return 1.00
+
+
+#using an instance method defined in Pound class
+#in order to rust an instance of a coin
+coin6 = Pound()
+coin6.rust()
+coin6.color #will return "greenish"
+
+#doing opposite, so cleaning an instance of Pound
+coin6.clean()
+coin6.color #will return "gold"

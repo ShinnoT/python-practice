@@ -37,6 +37,9 @@ class Pound:
     self.diameter = 22.5
     self.heads = True
 
+  def rust(self):
+    self.color = "greenish"
+
 
 #making a Pund nstance
 coin4 = Pound(rare=True)

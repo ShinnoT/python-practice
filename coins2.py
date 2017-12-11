@@ -82,3 +82,23 @@ class Two_Pence(Coin):
   #this is unnecessary cuz not really overriding but for demonstration purposes
   def clean(self):
     self.color = self.clean_color
+
+
+
+
+
+
+
+
+
+
+#fiddling around with coin instances
+
+#list of coin instances
+coins = [One_Pence(), Two_Pence(), Pound()]
+
+for coin in coins:
+  arguments = [coin, coin.color, coin.original_value, coin.diameter, coin.mass]
+
+  string = "{} - color: {}, value: {}, diameter: {}, mass: {}".format(*arguments)
+  print(string)

@@ -51,7 +51,7 @@ class Pound(Coin):
 
 
 # generated a one_pence class
-class one_pence(Coin):
+class One_Pence(Coin):
   def __init__(self):
     data = {
       "original_value":0.01,
@@ -64,7 +64,7 @@ class one_pence(Coin):
 
 
 #generated a two_pence class
-class two_pence(Coin):
+class Two_Pence(Coin):
   def __init__(self):
     data = {
       "original_value":0.02,

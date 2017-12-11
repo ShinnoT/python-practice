@@ -25,7 +25,7 @@ class Coin:
   def rust(self):
       self.color = self.rusty_color
 
-  def clear():
+  def clean():
       self.color = self.clean_color
 
   def __del__(self):
@@ -48,3 +48,37 @@ class Pound(Coin):
       "mass":9.5
     }
     super().__init__(**data) #unpack data and make new parent class instance
+
+
+# generated a one_pence class
+class one_pence(Coin):
+  def __init__(self):
+    data = {
+      "original_value":0.01,
+      "clean_color":"bronze",
+      "rusty_color":"brownish",
+      "diameter":20.3,
+      "mass":3.56
+    }
+  super().__init__(**data)
+
+
+#generated a two_pence class
+class two_pence(Coin):
+  def __init__(self):
+    data = {
+      "original_value":0.02,
+      "clean_color":"bronze",
+      "rusty_color":"brownish",
+      "diameter":25.9,
+      "mass":7.12
+    }
+  super().__init__(**data)
+
+  #polymorphism --> overriding parent instance methods inside children
+  def rust(self):
+    self.color = self.clean_color
+
+  #this is unnecessary cuz not really overriding but for demonstration purposes
+  def clean(self):
+    self.color = self.clean_color

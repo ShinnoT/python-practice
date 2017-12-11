@@ -24,6 +24,9 @@ coin3 = Pound()
 coin3.color # will still return "gold"
 
 
+#in order to have instance methods, you need the __init__(self) constructor
+#and you most certainly need instance methods because it makes your life easier
+
 
 class Pound:
 

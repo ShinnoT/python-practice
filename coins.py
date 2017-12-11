@@ -20,3 +20,20 @@ coin2.color # will now return "red"
 
 coin3 = Pound()
 coin3.color # will still return "gold"
+
+
+
+class Pound:
+
+  def __init__(self, rare=True):
+    self.rare = rare
+
+    if self.rare:
+      self.value = 5.00
+    else:
+      self.value = 1.00
+
+    self.color = "gold"
+    self.diameter = 22.5
+    self.heads = True
+

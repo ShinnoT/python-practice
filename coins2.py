@@ -115,3 +115,19 @@ for coin in coins:
 
   string = "{} - color: {}, value: {}, diameter: {}, mass: {}".format(*arguments)
   print(string)
+
+
+
+#outpu of this script:
+# One pence - color: bronze, value: 0.01, diameter: 20.3, mass: 3.56
+# Two pence - color: bronze, value: 0.02, diameter: 25.9, mass: 7.12
+# One pound coin - color: gold, value: 1.0, diameter: 22.5, mass: 9.5
+# coin spent
+# coin spent
+# coin spent
+
+#however __del__ function is being called even though we didnt delete anything
+
+# When a python program finishes, it deletes all variables from memory.
+# If that variable is an object, it does this by running its __del__ method.
+# So you get that output from all the different objects being deleted when the script ends :)

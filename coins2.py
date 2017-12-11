@@ -1,7 +1,13 @@
 import random
 
 class Coin:
-  def __init__(self, rare=False, clean=True, heads=True):
+  def __init__(self, rare=False, clean=True, heads=True, **kwargs):
+
+    for key,value in kwargs.items():
+      setattr(self,key,value)
+      #set attributes will do self.original_value = 1.00 etc. automatically
+
+
     self.is_rare = rare
     self.is_clean = clean
     self.heads = heads
@@ -29,3 +35,16 @@ class Coin:
     heads_options = [True,False]
     choice = random.choice(heads_options)
     self.heads = choice
+
+
+# generate a Pound class that inherits from parent class Coin
+class Pound(Coin):
+  def __init__(self):
+    data = {
+      "original_value":1.00,
+      "clean_color":"gold",
+      "rusty_color":"greenish",
+      "diameter":22.5,
+      "mass":9.5
+    }
+    super().__init__(**data) #unpack data and make new parent class instance

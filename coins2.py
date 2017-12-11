@@ -36,6 +36,19 @@ class Coin:
     choice = random.choice(heads_options)
     self.heads = choice
 
+  #__str__ to avoid the weird < main Two_Pence object blah blah >
+  #when printing out object instance itself
+  #now when you print an object instance it will return "One pound coin", etc.
+  def __str__(self):
+    if self.original_value >= 1:
+      return "One pound coin"
+    elif self.original_value == 0.02:
+      return "Two pence"
+      #can also do something like:
+      # return "{}p Coin".format(int(self.original_value))
+    else:
+      return "One pence"
+
 
 # generate a Pound class that inherits from parent class Coin
 class Pound(Coin):

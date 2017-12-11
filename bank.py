@@ -19,4 +19,4 @@ class Account:
 
 class Current(Account):
   def __init__(self, name, balance):
-    super().__init__(name, balance, minimum_balance = -1000)
+    super().__init__(name, balance, min_balance = -1000)

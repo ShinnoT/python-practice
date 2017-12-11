@@ -80,3 +80,5 @@ coin6.color #will return "gold"
 coin6.flip_coin()
 
 
+del coin6
+#will return "coin spent" and then will delete the instance
